@@ -1,0 +1,239 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=euc-jp">
+ <link href='./epayco-theme/assets/css/bootstrap.min.css' rel="stylesheet">
+ <link href= './epayco-theme/assets/css/gsdk-bootstrap-wizard.css' rel="stylesheet">
+ <link href= './payment-card-checkout/css/style.css' rel="stylesheet">
+
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<body>
+  
+ <div class="wizard-container">
+                <div class="card wizard-card" data-color="orange" id="wizardProfile">
+   
+                        <div class="wizard-header">               
+                          <nav class="navbar navbar-default" role="navigation">
+                             <div class="container">
+                              <div class="col-sm-12">
+                                  <div class="navbar-header">
+                                      <img class="img-logo" src="https://369969691f476073508a-60bf0867add971908d4f26a64519c2aa.ssl.cf5.rackcdn.com/logos_clientes/comercio.png" alt="">
+                                 <!-- <img class="img-logo" src="https://pruebasepayco.tk/prueba/eProoweb.jpg" alt=""> -->
+                                  </div>
+                                 <div class="pull-right" style="position:center;">
+                                      <p class="pull-right selloheader hidden-xs">  
+                                          Pago seguro by
+                                        <img src="https://369969691f476073508a-60bf0867add971908d4f26a64519c2aa.ssl.cf5.rackcdn.com/logos/logo_epayco_200px.png" alt width="20%" height="20%">
+                                      </p>
+                                   </div>
+                              </div>
+                             </div>
+                            </nav>
+                         </div>
+
+
+                        <div class="wizard-navigation">
+                            <ul>
+                                <li><a href="#about" data-toggle="tab">mi Plan</a></li>
+                                <li><a href="#account" data-toggle="tab">mi information</a></li>
+                                <li><a href="#address" data-toggle="tab">Confirmation</a></li>
+                            </ul>
+                        </div>
+
+
+
+                     <div class="tab-content">
+                            <div class="tab-pane" id="about">
+                              <div class="row">
+                                  <h4 class="info-text"> Payco.co ® Paga y Cobra Online</h4>
+                              
+                                  <div class="col-sm-10 col-sm-offset-1">
+                                          <div class="form-group">
+                                            <label>Select the Plan</label><br>    
+                                             <select name="selec_plan" class="form-control" id="selec_plan" onchange="selec_plans();" required>
+                                              <option >select the plan</option>
+                                      
+                                                <option value="planes"  >planes</option>
+
+                                             </select>
+                                           </div>
+                                              
+                                            <div id="name_table"></div>
+                                         <div id="mostrardatos3" hidden="true"></div>
+                                     </div>
+
+
+
+                              <div class="col-sm-6">
+                                   <div >
+                                         <div >
+                                              <script>
+                                       
+                                  function selec_plans()
+                                  {       
+                                           $('#selec_plan').click(function(){
+                                  var id=  $('select[name="selec_plan"] option:selected').val(); 
+                                  var name= $('select[name="selec_plan"] option:selected').text();
+
+                               console.log(id,name);
+                                          }   )}
+                                            </script>
+                                        </div>
+                                     </div>
+                                             <div class="col-sm-10 col-sm-offset-1">
+                                                <div class="form-group"></div>
+                                             </div>
+                                  </div>
+
+
+                              </div>
+                            </div>
+
+
+
+                            <div class="tab-pane" id="account">
+                                   <div class="row">
+                                   <div class="col-sm-10 col-sm-offset-1">
+                                       <form  method="POST" >
+                                        <div class="container">
+                  
+                                          <div class="col2">
+                                            <label>Document</label><br>
+                                             <select name="selec_plan_" class="document" id="selec_plan_" >
+                                                 <option value="CC">CC</option>
+                                                 <option value="TI">TI</option>
+                                                 <option value="DNI">DNI</option>
+                                            </select>
+                                            
+                                       
+                                          
+                                        
+                                          </div>
+                                        </div>
+                                        </form>
+                                     
+                                        <div class="form-group">
+                                      <span class="icon-credit-card"></span>
+                                      <div class="card-errors"></div>
+                          
+                                         </div>                                                
+                                        </div>
+                                    </div>
+                                </div>
+                               
+
+
+                               <script src="https://s3-us-west-2.amazonaws.com/epayco/v1.0/epayco.min.js"></script>
+                            <div class="tab-pane" id="address">
+                                <div class="row">
+                                    <div class="col-sm-12">     
+                                       <center> <div id="mostrardatos2">
+                                   <div class="row">
+                                   <div class="col-sm-10 col-sm-offset-1">
+                                       <form  method="POST" id="customer-form" autocomplete="off">
+                                        <div class="container">
+                                         <div class="col1">
+                                            <div class="card">
+                                              <div class="front">
+                                                <div class="type">
+                                                  <img class="bankid"/>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="col2">
+                                             <label>name</label>
+                                            <input class="inputname" type="text" placeholder="Joe Doe" data-epayco="card[name]" id="card[name]" name="card[name]"  /><br>
+                                             <label>email</label>
+                                            <input class="email" type="text" placeholder="JoeDoe@email.com" data-epayco="card[email]" id="card[email]"  /><br>
+                                            <label>phone</label>
+                                            <input class="telephone" type="text" placeholder="3051000000"  id="telephone"  /><br>
+                                            <label>Card</label>
+                                            <input class="number" type="text" maxlength="19" minlength="15" onkeypress='return event.charCode >= 48 && event.charCode <= 57' data-epayco="card[number]" id="card[number]" 
+                                            /><br>
+                                            <label>Month</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<label>Year</label><br>
+                                            <input class="expire" type="text" placeholder="MM" data-epayco="card[exp_month]" id="mm" required  />
+                                            <input class="expires" type="text" placeholder="Year" data-epayco="card[exp_year]" id="y" maxlength="4"  minlength="3" required /><br>
+                                           <label>Security Number</label><br>
+                                            <input class="cvc"  type="text" placeholder="CVC" maxlength="4" data-epayco="card[cvc]" required />
+                                            <button type="submit" class="buy" id="enviar" ><i class="material-icons"  >lock</i> Pay </button>
+                                          </div>
+                                        </div>
+                                        </form>
+                                           <script src="./data_token.js">
+/*$('#customer-form').submit(function(event) {
+  debugger
+    event.preventDefault()
+    console.log('click');
+  })
+*/
+
+       </script>
+                                     
+                                        <div class="form-group">
+                                      <span class="icon-credit-card"></span>
+                                      <div class="card-errors"></div>
+                                 <div id="mostrardatos4" hidden="true" ></div> 
+                                 <div id="mostrardatos"></div>
+    
+                                         </div>                                                
+                                        </div>
+                                    </div>
+                                   </div></center>
+                                    </div>
+                              
+                            
+                                    <div class="col-sm-10 col-sm-offset-1">
+                                         <div class="form-group">
+
+                                          </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wizard-footer height-wizard">
+                            <div class="pull-right">
+                                <input type='button' class='btn btn-next btn-fill btn-warning btn-wd btn-sm' name='next' value='Next' />
+                                 <form action="<?php  echo plugin_dir_url(payco.'/loading/loading.php').'loading.php'; ?>"> 
+                                <input type='submit' class='btn btn-finish btn-fill btn-warning btn-wd btn-sm' name='finish' value='Finish' />
+                            
+                                </form>
+                               </div>
+                               <div class="pull-left">
+                                <input type='button' class='btn btn-previous btn-fill btn-default btn-wd btn-sm' name='previous' value='Previous' />
+                               </div>
+                            <div class="clearfix"></div>
+                            </div>
+                         </div>
+                    
+                       </div>
+
+                       </body>
+
+    <!--   Core JS Files   -->
+ <script src='./payment-card-checkout/js/index.js'></script>
+  <script src='./epayco-theme/assets/js/jquery-2.2.4.min.js'></script>
+  <script src='./epayco-theme/assets/js/bootstrap.min.js'></script>
+  <script src='./epayco-theme/assets/js/jquery.bootstrap.wizard.js'></script>
+  <script src='./epayco-theme/assets/js/gsdk-bootstrap-wizard.js'></script>
+<script src='./epayco-theme/assets/js/jquery.validate.min.js'></script>
+
+
+
+
+
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+
+</html>
+
