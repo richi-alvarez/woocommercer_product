@@ -1,48 +1,48 @@
-﻿
-____ Plugin Name ____
+﻿#ePayco plugin para WooCommerce v2.6
 
-Payco, paga y cobra online.
+**Si usted tiene alguna pregunta o problema, no dude en ponerse en contacto con nuestro soporte técnico: desarrollo@payco.co.**
 
-____ Description ____
+## Tabla de contenido
 
-Versión desarrollada para Wordpress versión 4.1, Woocommerce versión 3.3.5. para mejor estabilidad 
-y compatibilidad probar en las versiones indicadas.
+* [Requisitos](#requisitos)
+* [Instalación](#instalación)
+* [Pasos](#pasos)
+* [Versiones](#versiones)
 
-____ Install ____
+## Requisitos
 
-1) Para instalar el Plugin de payco, ingrese al administrador de Wordpress, en el menú principal ubique la sección plugins, 
-despliegue las opciones y haga click sobre la opción Añadir nuevo.
+* Tener una cuenta activa en [ePayco](https://pagaycobra.com).
+* Tener instalado WordPress y WooCommerce.
+* Acceso a las carpetas donde se encuetra instalado WordPress y WooCommerce.
+* Acceso al admin de WordPress.
 
-2) En la sección Añadir plugins localice el botón Subir plugin haga click sobre él.
+## Instalación
 
-3) Al dar click en el boton Seleccionar archivo, busque en su equipo el plugin descargado de la pagina payco.co y proceda a instalar dando click en el boton Instalar ahora.
+1. [Descarga el plugin.](https://github.com/epayco/Plugin_ePayco_WooCommerce/releases/tag/3.2.1)
+2. Ingresa al administrador de tu wordPress.
+3. Ingresa a Plugins / Añadir-Nuevo / Subir-Plugin. 
+4. Busca el plugin descargado en tu equipo y súbelo como cualquier otro archivo.
+5. Después de instalar el .zip lo puedes ver en la lista de plugins instalados , puedes activarlo o desactivarlo.
+6. Para configurar el plugin debes ir a: WooCommerce / Ajustes / Finalizar Compra y Ubica la pestaña ePayco.
+7. Configura el plugin ingresando el **P_CUST_ID_CLIENTE** y el **P_KEY**, los puedes ver en tu [panel de clientes](https://secure.payco.co/clientes/).
+8. Selecciona o crea una página de respuesta donde el usuario será devuelto después de finalizar la compra.
+9. Realiza una o varias compras para comprobar que todo esté bien.
+10. Si todo está bien recuerda cambiar la variable Modo Prueba a NO y empieza a recibir pagos de forma instantánea y segura con ePayco.
 
-4) Si el proceso se ejecuto correctamente recibirá el mensaje Plugin instalado correctamente. 
-Proceda a dar click en Activar plugin.
 
-____ Settings ____
+## Pasos
 
-1) Ubique en el menú principal de administración la opción WooCommerce; 
-En las opciones que despliega ubique la opción Ajustes y haga clic en ella.
+<img src="ImgTutorialWooCommerce/tuto-1.jpg" width="400px"/>
+<img src="ImgTutorialWooCommerce/tuto-2.jpg" width="400px"/>
+<img src="ImgTutorialWooCommerce/tuto-3.jpg" width="400px"/>
 
-2) En las opciones de ajustes de click en la pestaña Finalizar compra. 
 
-3) Desplácese hacia el final de la página en la sección pasarelas de pago. 
-Y elija como predeterminada la opción de payco, luego guarde cambios y proceda a dar click en el botón de ajustes.
 
-4) Configure los siguientes campos:
-
-Activar / Desactivar: Permitirá activar el medio de pago.
-Titulo: Controla el titulo que el usuario ve durante el pago.
-Descripción: Controla la descripción que el usuario ve durante el pago.
-P_CUST_ID_CLIENTE: Código de usuario.
-P_KEY: Código asignado por payco.co.
-Modo Prueba: Si (realizar pruebas), No (producción).
-Tax Rate – Read: Calcular IVA.
-Moneda: Selecciona el tipo de moneda.
-
-Proceda a dar click en el botón Guardar cambios.
-
-Nota: Para ver la instalación gráficamente diríjase a la carpeta install y verifique los pasos en las imágenes.
-
-CREATION DATE: 2015/02/06
+## Versiones
+* [ePayco plugin WooCommerce v3.8.x](https://github.com/richi-alvarez/woocommercer_product/releases).
+* [ePayco plugin WooCommerce v3.5.x](https://github.com/epayco/Plugin_ePayco_WooCommerce/releases/tag/3.5.3).
+* [ePayco plugin WooCommerce v3.4.x](https://github.com/epayco/Plugin_ePayco_WooCommerce/releases/tag/3.4.2).
+* [ePayco plugin WooCommerce v3.2.x](https://github.com/epayco/Plugin_ePayco_WooCommerce/releases/tag/3.2.1).
+* [ePayco plugin WooCommerce v3.0.4.x](https://github.com/epayco/Plugin_ePayco_WooCommerce/releases/tag/3.0.4.x).
+* [ePayco plugin WooCommerce v2.6.4.x](https://github.com/epayco/Plugin_ePayco_WooCommerce/releases/tag/2.6.4.x).
+* [ePayco plugin WooCommerce v2.6](https://github.com/epayco/Plugin_ePayco_WooCommerce/releases/tag/2.6).
