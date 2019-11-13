@@ -35,14 +35,11 @@
 <img src="ImgTutorialWooCommerce/tuto-1.jpg" width="400px"/>
 <img src="ImgTutorialWooCommerce/tuto-2.jpg" width="400px"/>
 <img src="ImgTutorialWooCommerce/tuto-3.jpg" width="400px"/>
-<img src="ImgTutorialWooCommerce/tuto-4.jpg" width="400px"/>
-<img src="ImgTutorialWooCommerce/tuto-5.jpg" width="400px"/>
-<img src="ImgTutorialWooCommerce/tuto-6.jpg" width="400px"/>
-<img src="ImgTutorialWooCommerce/tuto-7.jpg" width="400px"/>
-<img src="ImgTutorialWooCommerce/tuto-8.jpg" width="400px"/>
+
 
 
 ## Versiones
+* [ePayco plugin WooCommerce v3.8.x](https://github.com/richi-alvarez/woocommercer_product/releases).
 * [ePayco plugin WooCommerce v3.5.x](https://github.com/epayco/Plugin_ePayco_WooCommerce/releases/tag/3.5.3).
 * [ePayco plugin WooCommerce v3.4.x](https://github.com/epayco/Plugin_ePayco_WooCommerce/releases/tag/3.4.2).
 * [ePayco plugin WooCommerce v3.2.x](https://github.com/epayco/Plugin_ePayco_WooCommerce/releases/tag/3.2.1).
